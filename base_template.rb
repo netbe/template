@@ -1,12 +1,13 @@
 # base_template.rb
 
-project_dir = root.split('/').last
-
+project_dir = Rails.root.to_s.split('/').last
+exit
 # Delete unnecessary files
 run "rm README"
 run "rm doc/README_FOR_APP"
 run "rm public/index.html"
 run "rm public/favicon.ico"
+run 'rm public/images/rails.png'
 run "rm public/robots.txt"
 run "rm -f public/javascripts/*"
 run "rm db/*.sqlite3"
