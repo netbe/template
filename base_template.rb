@@ -30,7 +30,7 @@ run "touch tmp/.gitignore log/.gitignore vendor/.gitignore"
 
 file 'Gemfile', <<-GEMFILE
 source :gemcutter
-gem 'rails', '2.3.10', :require => nil
+gem 'rails', '3.0.5', :require => nil
 # Switch to the appropriate gem for your database
 gem 'mysql'
 gem 'mongrel'
@@ -78,7 +78,7 @@ git :add => ".", :commit => "-m 'initial commit'"
 
 
 generate :controller, "welcome index"
-route "map.root :controller => 'welcome'"
+route "root :to => 'welcome#index'"
 git :rm => "public/index.html"
 
 git :add => ".", :commit => "-m 'adding welcome controller'"
