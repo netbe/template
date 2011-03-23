@@ -1,5 +1,4 @@
 # base_template.rb
-load_template "/Users/netbe/code/bundler_template.rb"
 
 project_dir = root.split('/').last
 
